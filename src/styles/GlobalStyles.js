@@ -1,10 +1,10 @@
-import { createGlobalStyle } from "styled-components";
-import MuliRegular from "fonts/Muli-Regular.woff";
-import MuliBlack from "fonts/Muli-Black.woff";
+import { createGlobalStyle } from "styled-components"
+import MuliRegular from "fonts/Muli-Regular.woff"
+import MuliBlack from "fonts/Muli-Black.woff"
 
 export const colors = {
-  white: "#fff",
-  darkGrey: "1a1c20",
+  white: "white",
+  darkGrey: "#1a1c20",
   deepDarkGrey: "#404040",
   blueShade1: "#215973",
   blueShade2: "#6fadc6",
@@ -21,7 +21,7 @@ export const darkTheme = {
   },
 }
 
-export const whiteTheme = {
+export const lightTheme = {
   colors: {
     background: colors.white,
     menuBackground: colors.blueShade3,
@@ -31,7 +31,7 @@ export const whiteTheme = {
   },
 }
 
-export const globalStyles = createGlobalStyle`
+export const GlobalStyles = createGlobalStyle`
   :root {
     --site-max-width: 1200px;
   }
@@ -39,7 +39,7 @@ export const globalStyles = createGlobalStyle`
   @font-face {
     font-family: 'Muli Regular';
     src: local('Muli Regular'), local('MuliRegular'),
-         url(${MuliRegular}) format('woff');
+      url(${MuliRegular}) format('woff');
     font-weight: 300;
     font-style: normal;
   }
@@ -47,15 +47,15 @@ export const globalStyles = createGlobalStyle`
   @font-face {
     font-family: 'Muli Black';
     src: local('Muli Black'), local('MuliBlack'),
-         url(${MuliBlack}) format('woff');
+      url(${MuliBlack}) format('woff');
     font-weight: 300;
     font-style: normal;
   }
 
   body {
     background: ${props => props.theme.colors.background};
-    color: ${props => props.theme.colors.textSeccondary};
-    font-family: "Muli Regular", Arial, Helvetica;
+    color: ${props => props.theme.colors.textSecondary};
+    font-family: "Muli Regular", Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0 20px 80px 20px;
     transition: all 0.5s ease;
@@ -107,5 +107,3 @@ export const globalStyles = createGlobalStyle`
     text-decoration: none;
   }
 `
-
-

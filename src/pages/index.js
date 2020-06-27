@@ -2,11 +2,20 @@ import React from "react"
 // Components
 import Layout from "components/Layout"
 import SEO from "components/SEO"
+import Hero from "components/Hero"
+import BlogPostCard from "components/BlogPostCard"
 
-const IndexPage = () => (
-  <Layout>
-    Start page
-  </Layout>
-)
+const IndexPage = () => {
+
+  return (
+    <Layout>
+      <SEO title="home" />
+      <Hero />
+      <main>
+        <BlogPostCard />
+      </main>
+    </Layout>
+  )
+}
 
 export default IndexPage

@@ -10,8 +10,6 @@ import { GlobalStyles, darkTheme, lightTheme} from 'styles/GlobalStyles';
 
 const Layout = ({ children }) => {
   const data = useMetaDataQuery();
-  console.log('data', data)
-  
   return (
     <ThemeProvider theme={darkTheme}>
       <GlobalStyles />
